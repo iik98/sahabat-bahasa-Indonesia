@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import MateriBahasa from "./pages/materi-bahasa";
@@ -9,9 +9,12 @@ import LoginPage from "./pages/login/index";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === "/login";
+
   return (
     <div>
-      <Navbar />
+      {!hideNavbar && <Navbar />}
       <div className="p-6">
         <Routes>
           <Route path="/login" element={<LoginPage />} />
