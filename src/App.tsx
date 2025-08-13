@@ -18,9 +18,8 @@ function App() {
       <div className="p-6">
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-
+          <Route path="/" element={<Home />} />
           <Route element={<PrivateRoute />}>
-            <Route path="/" element={<Home />} />
             <Route path="/materi-bahasa" element={<MateriBahasa />} />
             <Route path="/latihan-interaktif" element={<LatihanInteraktif />} />
             <Route path="/mulai-menulis" element={<MulaiMenulis />} />
