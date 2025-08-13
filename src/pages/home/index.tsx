@@ -48,7 +48,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="hidden md:block">
+        <div className=" md:block">
           <img
             src="/banner.jpg"
             alt="Belajar Bahasa"
